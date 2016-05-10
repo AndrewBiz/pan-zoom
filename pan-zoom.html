@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Picture Pan&Zoom</title>
+    <meta name="description" content="Template for picture panoramic view">
+    <meta name="author" content="Andrew Bizyaev">
+
+    <link rel="stylesheet" href="./pan-zoom/default-reset.css">
+    <link href="./pan-zoom/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./pan-zoom/default.css" id="theme">
+    <link href="./pan-zoom/web-fonts.css" rel="stylesheet" type="text/css">
+    <link href="./pan-zoom/backgroundClasses.css" rel="stylesheet" type="text/css">
+    <link href="./pan-zoom/surfaceClasses.css" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="http://strut.io/editor/preview_export/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="http://strut.io/editor/preview_export/apple-touch-icon.png" type="image/png">
+
+    <script type="text/javascript" src="./pan-zoom/impress.js"></script>
+    <script src="./pan-zoom/onready.js"></script>
+    <script src="./pan-zoom/loadPresentation.js"></script>
+    <script>
+    ready(function() {
+        if (document.getElementById('launched-placeholder'))
+            loadPresentation();
+
+        if (!window.presStarted) {
+            startPres(document, window);
+            impress().init();
+        }
+    });
+    </script>
+</head>
+
+<body class="impress-supported impress-enabled">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div class="bg strut-surface">
+  <div class="bg innerBg">
+    <div id="impress">
+      <div>
+<!-- Слайд 1 -->
+        <div class="step slide" data-x="2000" data-y="2800" data-rotate-y="0.00" data-scale="3">
+          <div class="slideContainer" style="width: 1024px; height: 768px;">
+            <div class="themedArea">
+<!-- Здесь заголовок картинки -->
+               <h3>Целевая архитектура ИТ БМО</h3>
+            </div>
+            <div class="componentContainer">
+              <div class="transformContainer">
+<!-- Здесь вставить ссылку на картинку -->
+                <img src="./IT-map.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- Слайд 2 -->
+        <div class="step slide" data-x="6280" data-y="2764" data-scale="3">
+        </div>
+
+<!-- Слайд n -->
+        <div class="step slide" data-x="7000" data-y="2800" data-scale="3">
+        </div>
+
+<!-- Слайд n -->
+        <div class="step slide" data-x="9000" data-y="3800" data-scale="3">
+        </div>
+
+<!-- Слайд общего вида -->
+        <div id="overview" class="step slide" data-x="8192" data-y="2800" data-scale="9">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
