@@ -35,7 +35,7 @@
     </script>
 </head>
 
-<body class="impress-supported impress-enabled">
+<body class="impress-not-supported">
 <div class="fallback-message">
     <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
@@ -45,8 +45,20 @@
   <div class="bg innerBg">
     <div id="impress">
       <div>
+<!--
+    So to summarize of all the possible attributes used to position presentation steps, we have:
+    * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+        the canvas in pixels; their default value is 0;
+    * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+        the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+        are exactly the same;
+    * `data-scale` - defines the scale of step element; default value is 1
+    These values are used by impress.js in CSS transformation functions, so for more information consult
+    CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+-->
+
 <!-- Слайд 1 -->
-        <div class="step slide" data-x="2000" data-y="2800" data-rotate-y="0.00" data-scale="3">
+        <div class="step slide" data-x="0" data-y="0" data-rotate-y="12.00" data-scale="1">
           <div class="slideContainer" style="width: 1024px; height: 768px;">
             <div class="themedArea">
 <!-- Здесь заголовок картинки -->
@@ -62,19 +74,19 @@
         </div>
 
 <!-- Слайд 2 -->
-        <div class="step slide" data-x="6280" data-y="2764" data-scale="3">
+        <div class="step slide" data-x="800" data-y="0" data-scale="1">
         </div>
 
 <!-- Слайд n -->
-        <div class="step slide" data-x="7000" data-y="2800" data-scale="3">
+        <div class="step slide" data-x="1500" data-y="0" data-scale="1">
         </div>
 
 <!-- Слайд n -->
-        <div class="step slide" data-x="9000" data-y="3800" data-scale="3">
+        <div class="step slide" data-x="0" data-y="700" data-scale="1" data-rotate="-90">
         </div>
 
 <!-- Слайд общего вида -->
-        <div id="overview" class="step slide" data-x="8192" data-y="2800" data-scale="9">
+        <div id="overview" class="step slide" data-x="1000" data-y="700" data-scale="3">
         </div>
 
       </div>
